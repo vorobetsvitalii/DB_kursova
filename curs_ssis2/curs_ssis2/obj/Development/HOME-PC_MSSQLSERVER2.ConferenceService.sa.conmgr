@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HOME-PC_MSSQLSERVER2.ConferenceService.sa"
+  DTS:DTSID="{4EA1F568-CA46-4F81-9875-0BF14F316FC9}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-JMTREOS;User ID=sa;Initial Catalog=ConferenceService;Provider=SQLOLEDB.1;Auto Translate=False;Application Name=SSIS-curs_ssis2-{4EA1F568-CA46-4F81-9875-0BF14F316FC9}HOME-PC\MSSQLSERVER2.ConferenceService.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAliSjxZ7PECZ4x3SUZgvKAAAAAACAAAAAAAQZgAAAAEAACAAAADCF3v0AhN9w5BzIa+zxuQ/of8yGTu+kXAHp2LtE+RiQwAAAAAOgAAAAAIAACAAAABfA38wihomImHrAtkOfTUdjCaTbDW3uYGIowuOFrLZLXAAAAAu8m9Hnnm+t8lbJwRSVB62gB/Bo5RSeARjAYfWdlvxSnU4lzVi9D01jdUtN6/HfkhG5IX7QB5gP4E+/kTqZ08PzR38MiEf8DTjZRg7ra2cptNDBJKs/JnCxFrYrhZYiAUPF/ATuiRIXnllMJK7ZETVQAAAAHWY2xQpV7mmxHqOYlYQ4hs4UgXacdh9DLLxdjuQauKYqc07E4rDJzozuk5ObOEGF4VLiDmrvsgyVJ3JsmiYPCE=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

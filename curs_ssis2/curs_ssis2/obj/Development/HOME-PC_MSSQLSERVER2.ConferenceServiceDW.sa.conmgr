@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HOME-PC_MSSQLSERVER2.ConferenceServiceDW.sa"
+  DTS:DTSID="{E6C7D957-C638-4B07-81F9-A31ECA4552E1}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-JMTREOS;Initial Catalog=ConferenceServiceDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-{E6C7D957-C638-4B07-81F9-A31ECA4552E1}HOME-PC_MSSQLSERVER2.ConferenceServiceDW.sa;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

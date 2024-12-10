@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Fact Conference Activity'[Id], 'Fact Conference Activity'[Participant Name], 'Fact Conference Activity'[Conference Name], 'Fact Conference Activity'[Conference Date], 'Fact Conference Activity'[Location Name], 'Fact Conference Activity'[Organizer Name], 'Fact Conference Activity'[Base Price], 'Fact Conference Activity'[Final Price], FILTER(VALUES('Fact Conference Activity'[Conference Name]), ('Fact Conference Activity'[Conference Name] = "Aisha908") || ('Fact Conference Activity'[Conference Name] = "Alan")))</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Id</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Id]</HierarchyUniqueName>
+                    <LevelName>Id</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Id].[Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Participant Name</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Participant Name]</HierarchyUniqueName>
+                    <LevelName>Participant Name</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Participant Name].[Participant Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Participant Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Conference Name</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Conference Name]</HierarchyUniqueName>
+                    <LevelName>Conference Name</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Conference Name].[Conference Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Conference Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Conference Date</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Conference Date]</HierarchyUniqueName>
+                    <LevelName>Conference Date</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Conference Date].[Conference Date]</UniqueName>
+                  </ID>
+                  <ItemCaption>Conference Date</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Location Name</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Location Name]</HierarchyUniqueName>
+                    <LevelName>Location Name</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Location Name].[Location Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Location Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Organizer Name</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Organizer Name]</HierarchyUniqueName>
+                    <LevelName>Organizer Name</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Organizer Name].[Organizer Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Organizer Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Base Price</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Base Price]</HierarchyUniqueName>
+                    <LevelName>Base Price</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Base Price].[Base Price]</UniqueName>
+                  </ID>
+                  <ItemCaption>Base Price</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Fact Conference Activity</DimensionName>
+                    <HierarchyName>Final Price</HierarchyName>
+                    <HierarchyUniqueName>[Fact Conference Activity].[Final Price]</HierarchyUniqueName>
+                    <LevelName>Final Price</LevelName>
+                    <UniqueName>[Fact Conference Activity].[Final Price].[Final Price]</UniqueName>
+                  </ID>
+                  <ItemCaption>Final Price</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Conference Service DW</From>
+            <Filter>
+              <FilterItems>
+                <FilterItem>
+                  <HierarchyUniqueName>[Fact Conference Activity].[Conference Name]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[Fact Conference Activity].[Conference Name].&amp;[Aisha908]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Fact Conference Activity].[Conference Name].&amp;[Alan]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+              </FilterItems>
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Fact Conference Activity'[Id], 'Fact Conference Activity'[Participant Name], 'Fact Conference Activity'[Conference Name], 'Fact Conference Activity'[Conference Date], 'Fact Conference Activity'[Location Name], 'Fact Conference Activity'[Organizer Name], 'Fact Conference Activity'[Base Price], 'Fact Conference Activity'[Final Price], FILTER(VALUES('Fact Conference Activity'[Conference Name]), ('Fact Conference Activity'[Conference Name] = "Aisha908") || ('Fact Conference Activity'[Conference Name] = "Alan")))</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Id">
+        <DataField>Fact Conference Activity[Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Participant_Name">
+        <DataField>Fact Conference Activity[Participant Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Conference_Name">
+        <DataField>Fact Conference Activity[Conference Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Conference_Date">
+        <DataField>Fact Conference Activity[Conference Date]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Location_Name">
+        <DataField>Fact Conference Activity[Location Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Organizer_Name">
+        <DataField>Fact Conference Activity[Organizer Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Base_Price">
+        <DataField>Fact Conference Activity[Base Price]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Final_Price">
+        <DataField>Fact Conference Activity[Final Price]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
